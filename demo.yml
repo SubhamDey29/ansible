@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  become: True
+  tasks:
+   - name: Remove files
+     file:
+       path: /var/scooby.txt
+       state: absent
+         
